@@ -4,14 +4,12 @@ class Cliente {
     Computador[] computadores = new Computador[3];
     int contador = 0;
 
-    //construtor
     Cliente(String nome, long matricula) {
             this.nome = nome;
             this.matricula = matricula;
     }
 
-    //limitador de compras (1 de cada)
-    void comprar(Computador pc) {
+        void comprar(Computador pc) {
         if (contador < computadores.length) {
             computadores[contador++] = pc;
         } else {
@@ -19,7 +17,6 @@ class Cliente {
         }
     }
 
-    //exibe todos os itens adquiridos na compra
     void resumoCompra() {
         System.out.println("\nResumo da compra de " + nome + ":");
         float total = 0;
