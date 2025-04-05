@@ -3,11 +3,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        //lê os dados de nome com a entrada do usuario
         System.out.print("Digite seu nome: ");
         String nomeCliente = sc.nextLine();
 
-        //lê os dados de matricula com a entrada do usuario
         System.out.print("Digite sua matrícula: ");
         long matriculaCliente = sc.nextLong();
 
@@ -59,7 +57,7 @@ public class Main {
                     Computador pcEscolhido = promocoes[opcao - 1];
                     pcEscolhido.mostraPC();
                     System.out.print("Deseja adicionar à sacola? (s/n): ");
-                    sc.nextLine(); // limpa o buffer
+                    sc.nextLine(); 
                     String resposta = sc.nextLine();
                     if (resposta.equalsIgnoreCase("s")) {
                         cliente.comprar(pcEscolhido);
